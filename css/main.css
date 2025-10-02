@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* main.css */
+
+body {position: relative;}
+
+main {height: 100vh; text-align: center; align-content: center;}
+main > h2 {font-size: 1.4rem; line-height: 2.5rem;}
+main > p {font-size: 1.05rem;}
+
+.mainpage::before {content: ''; position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: url(../images/main_bg.jpg) no-repeat center; width: 100%; background-size: cover; filter: blur(10px); z-index: -1;}
+
+.mainpage > h2, .mainpage > p {color: #fff;}
+
+.booklist {margin: 35px auto 25px; width: 50%; background: #86e9eac7; padding: 6px 16px; box-sizing: border-box;}
+.booklist > p {font-weight: bold; margin-bottom: 2px; font-size: 1rem; line-height: 1.8rem;}
+.booklist > ul {text-align: left;}
+.booklist > ul > li {list-style: inside; margin: 6px 0;}

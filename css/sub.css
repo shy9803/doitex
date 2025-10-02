@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/* sub.css */
+
+.subpage {margin-bottom: 25px;}
+
+/* 공통 부분 */
+.subpage > .wrapper > .list_wrapper > .list .tag, .subpage > .wrapper > .list_wrapper > .list .name, .subpage > .wrapper > .list_wrapper > .list .cont, .subpage > .wrapper > .list_wrapper > .list a {box-sizing: border-box;}
+
+/* 리스트 */
+.subpage > .wrapper {width: 100%; position: relative;}
+.subpage > .wrapper > .t_bgimg {width: 100%; height: 200px;  align-content: center; position: relative; overflow: hidden;}
+.subpage > .wrapper > .t_bgimg::before {content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url(../images/list_bg.jpg) no-repeat center; background-size: cover; z-index: 1; filter: grayscale(0.6) contrast(0.3) brightness(0.85);} /* 배경 이미지만 별도 필터 생성 */
+.subpage > .wrapper h2 {text-align: center; font-size: 1.4rem; line-height: 2.5rem; position: relative; z-index: 2; color: #f5f5f5;}
+
+/* 리스트 탭 버튼 */
+.subpage > .wrapper > .tabmnu {display: flex; width: inherit; margin: 15px auto;}
+.subpage > .wrapper > .tabmnu > .tabbtn {text-transform: uppercase; margin: 0 7px; padding: 6px 16px; border-radius: 5px; border: none; cursor: pointer;}
+
+/* 리스트 목록 */
+.subpage > .wrapper > .list_wrapper {display: flex; width: inherit; flex-wrap: wrap;}
+.subpage > .wrapper > .list_wrapper > .list {width: calc(97%/3); background: #efefef81; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; margin: 5px;}
+.subpage > .wrapper > .list_wrapper > .list picture {display: block; width: 100%; padding: 5px; box-sizing: border-box; margin: 15px auto;}
+.subpage > .wrapper > .list_wrapper > .list img {width: 100%; height: 100%; object-fit: contain;}
+.subpage > .wrapper > .list_wrapper > .list .tag {padding: 2px 10px; font-size: 0.75rem; border-radius: 4px; margin: 5px; cursor: default;}
+.subpage > .wrapper > .list_wrapper > .list .name {font-size: 1.2rem; line-height: 2rem; margin: 8px 5px 2px;}
+.subpage > .wrapper > .list_wrapper > .list .cont {line-height: 1rem; padding: 8px 0; margin: 0 5px; font-size: 0.8rem; color: #4e0c0c;}
+.subpage > .wrapper > .list_wrapper > .list a {display: block; width: 80%; margin: 8px auto; padding: 4px 15px; border-radius: 15px; text-align: center; font-size: 0.9rem; transition: all 0.3s;}
+
+/* 색상 관련 */
+.tabbtn {background: #cedfdf;}
+.tabbtn:hover {background: #b2dbdb;}
+
+.tag1 {background: #574854; color: #eee;}
+.tag2 {background: #879649; color: #eee;}
+.tag3 {background: #552074; color: #eee;}
+.list a {background: #b2dbdb;}
+.list a:hover {background: #86e9ea;}
+
+/* 탭 메뉴 활성화 */
+.tabact {background: #3cdddf; font-weight: bold;}
+.tabact:hover {background: #86e9ea;}
+
+/* Top 버튼 */
+.topbtn {position: fixed; bottom: 45px; right: 10px; z-index: 15; background: #a0a0a071; cursor: pointer; border-radius: 2px; display: none;}
+.topbtn > i {font-size: 1.5rem; color: #333; padding: 6px 12px;}
+.topbtn:hover {background: #a0a0a0e5;}
+.topbtn:hover > i {color: #fff;}
+
+/* Tablet */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .subpage > .wrapper > .list_wrapper > .list {width: calc(97%/2);}
+}
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .subpage > .wrapper > .list_wrapper > .list {width: 100%;}
+}
